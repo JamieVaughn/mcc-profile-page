@@ -22,7 +22,11 @@ a:hover {
 }
 
 /* Section Styles */
-
+main{
+  background: #2c3e50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .main-nav {
   width: 100%;
   background: black;
@@ -38,6 +42,7 @@ a:hover {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+  z-index: 1000;
 }
 
 .nav .name {
@@ -57,7 +62,7 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/vie-on-pasture.jpg') no-repeat bottom center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -68,13 +73,15 @@ header {
 header .profile-image {
   margin-top: 50px;
   width: 150px;
-  height: 150px;
+  height: 200px;
   border-radius: 50%;
   border: 3px solid white;
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2);
+  box-shadow: 5px 5px 50px black;
+  z-index: 500;
 }
 .tag {
   background-color: #efefef;
@@ -98,6 +105,20 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+.card1{
+  margin: 30px;
+  padding: 20px 40px 40px;
+  text-align: center;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+  background: #fceabb;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+}
 .card:hover {
   border-color: #ff99ff;
 }
@@ -118,6 +139,14 @@ ul.skills {
 
 .skills li:nth-child(odd) {
   background: #0399ff;
+}
+
+.no-list li{
+  list-style: none;
+}
+
+.label{
+  font-size: .65em;
 }
 
 footer {
@@ -173,7 +202,7 @@ a.social:hover {
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: flex; 
-      max-width: 1200px;
+      /*max-width: 1200px;*/
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
